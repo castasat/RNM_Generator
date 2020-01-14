@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fragment_default_padding">16dp</dimen>
+    <dimen name="save_button_margin">28dp</dimen>
+    <dimen name="rnm_text_view_padding_top">24dp</dimen>
+</resources>

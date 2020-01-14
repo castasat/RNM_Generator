@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="@style/EvotorTheme.NoActionBar">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="android:windowBackground">@color/main_background</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:actionBarStyle">@style/EvotorTheme.Toolbar</item>
+        <item name="actionBarStyle">@style/EvotorTheme.Toolbar</item>
+    </style>
+
+    <style name="ActivityFadeAnimation" parent="android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fadein_anim</item>
+        <item name="android:activityOpenExitAnimation">@anim/fadeout_anim</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fadein_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/fadeout_anim</item>
+    </style>
+
+    <style name="LayoutStyle">
+        <item name="android:background">@color/main_background</item>
+    </style>
+
+    <style name="LargeTextToolbar" parent="@style/EvotorTheme.Toolbar">
+        <item name="android:textSize">@dimen/text_size_title1</item>
+        <item name="android:textColor">@color/text_white</item>
+    </style>
+
+</resources>

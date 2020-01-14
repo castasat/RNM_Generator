@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.rnm_generator"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+// to use @Parcelize
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    // AndroidX
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    // JetPack
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.1.0"
+    // Legacy because of evotor ui library
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    // material design
+    implementation 'com.google.android.material:material:1.0.0'
+    // evotor styles
+    implementation 'ru.evotor:styles:0.14.5'
+    // integration library
+    implementation 'com.github.evotor:integration-library:rc04-v0.4.41'
+    // RxJava3 lazy migration
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0-RC4'
+    implementation 'com.github.akarnokd:rxjava3-extensions:3.0.0-RC4'
+    // RxJava3 AndroidInteropSchedulers.mainThread() support
+    implementation 'com.github.akarnokd:rxjava3-android-interop:3.0.0-RC4'
+    // RxJava3 retrofit2 adapter support
+    implementation 'com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0-RC4'
+    // RxJava3 and RxJava1 interoperability support
+    implementation 'com.github.akarnokd:rxjava3-interop:3.0.0-RC4'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
